@@ -1,11 +1,8 @@
 services:
   - type: web
-    name: disease-api
+    name: disease-app  # Updated name for clarity (optional)
     env: python
     plan: free
-    buildCommand: pip install --default-timeout=180 -r requirements.txt
-    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
-    pythonVersion: 3.12.4
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
     autoDeploy: true
-
-
