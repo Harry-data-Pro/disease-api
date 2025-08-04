@@ -1,8 +1,5 @@
---find-links=vendor
-fastapi[standard]==0.116.0
-uvicorn[standard]==0.30.0
+streamlit==1.37.1  # Latest stable version
 scikit-learn==1.5.0
-lightgbm==4.2.0
+lightgbm==4.3.0
 pandas==2.2.3
 joblib==1.4.2
-
