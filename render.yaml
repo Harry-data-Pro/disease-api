@@ -5,6 +5,7 @@ services:
     plan: free
     buildCommand: pip install --default-timeout=180 -r requirements.txt
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
-    pythonVersion: 3.12 
+    pythonVersion: 3.12.4
     autoDeploy: true
+
 
