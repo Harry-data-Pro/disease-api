@@ -7,7 +7,7 @@ model = joblib.load("model/disease_model.pkl")
 label = joblib.load("model/label_encoder.pkl")
 
 # Dynamically get the exact list of features from the model (should be 132)
-FEATURES = list(model.feature_name_)
+FEATURES = sorted(list(model.feature_name_))
 
 # Streamlit app
 st.title("Disease Predictor")
@@ -41,3 +41,4 @@ if submit_button:
     st.success(f"Predicted Disease: **{disease}**")
     st.info(f"Probability: **{probability:.2%}**")
     st.write("Note: This is a model prediction—consult a doctor for real advice!")
+
